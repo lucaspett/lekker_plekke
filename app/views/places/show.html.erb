@@ -1,3 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Place</h1>
+
 <p>
   <strong>Name:</strong>
   <%= @place.name %>
@@ -12,6 +16,14 @@
   <strong>Rating:</strong>
   <%= @place.rating %>
 </p>
+
+<hr><br>
+
+<h2>Comments</h2>
+<%= render @place.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

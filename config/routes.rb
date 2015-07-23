@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :places
+  resources :places do
+    resources :comments
+  end
 
   root "places#index"
   # The priority is based upon order of creation: first created -> highest priority.
